@@ -1,14 +1,23 @@
 #include <iostream>
 using namespace std;
-#include "DSA.h"
-
+#include "ODSA.h"
+#include "UDSA.h"
 int main()
 {
-  OrderedDSA d(5);
-  d.insert(3);
-  d.insert(2);
-  d.insert(6);
+  OrderedDSA od(5);
+  od.insert(3);
+  od.insert(2);
+  od.insert(6);
+  UnorderedDSA ud(5);
+  ud.insert(4);
+  ud.insert(9);
+  ud.insert(3);
+  cout << "Ordered: ";
   for(int i=0;i<5;i++)
-    cout << d[i] << ' ';
+    cout << od[i] << ' ';
+  cout << '\n';
+  cout << "Unordered: ";
+  for(int i=0;i<5;i++)
+    cout << ud[i] << ' ';
 	return 0;
 }
