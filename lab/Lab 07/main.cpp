@@ -4,20 +4,32 @@ using namespace std;
 #include "DoublyList.h"
 
 int main(){
-    SinglyList s1;
     srand(time(NULL));
-    int c;
+
+    SinglyList s1;
+    DoublyList d1, d2;
     for(int i=0; i<10; i++){
-        s1.push( rand()%10 );
-    }
-    SinglyList s2(s1), s3(s1);
-    // s1.print();
-    // s1.BubbleSort();
-    // s1.print();
-    DoublyList d1;
-    for(int i=0; i<10; i++)
+        s1.push(rand()%10);
         d1.push(rand()%10);
+        d2.push(rand()%10);
+    }
+    
+    cout << "Singly List: ";
+    s1.print();
+    cout << "Bubble Sorted: ";
+    s1.BubbleSort();
+    s1.print();
+
+    cout << "\nDoubly List: ";
     d1.print();
+    cout << "Selection Sorted: ";
     d1.SelectionSort();
     d1.print();
+
+    cout << "\nDoubly List: ";
+    d2.print();
+    cout << "Insertion Sorted: ";
+    d2.InsertionSort();
+    d2.print();
+    
 }

@@ -25,19 +25,6 @@ class SinglyList{
     }
     public:
     SinglyList(){head = NULL;}
-    SinglyList(SinglyList& s){
-        if(!s.head)
-            return;
-        head = NULL;
-        head = new SinglyNode(s.head->num);
-        SinglyNode* temp = head;
-        SinglyNode* shead = s.head;
-        while(shead->next){
-            temp->next = new SinglyNode(shead->next->num);
-            shead = shead->next;
-            temp = temp->next;
-        }
-    }
     
     void print(){
         SinglyNode* temp= head;
